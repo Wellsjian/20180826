@@ -35,13 +35,10 @@ class YouDaoSpider:
         ts = str(int(time.time()*1000))
         print(ts)
         s = hashlib.md5()
-        # s.update("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36".encode())
-        # bv = s.hexdigest()
-        # print(bv)
         salt = ts + str(random.randint(0,9))
-        # print(salt)
         s.update(("fanyideskweb" + word + salt + "n%A-rKaT5fb[Gy?;N5@Tj").encode())
         sign = s.hexdigest()
+        return salt, ts, sign
         # print(sign)
         # salt = str(int(time.time() * 1000)) + str(random.randint(0, 9))
         # # sign
@@ -51,7 +48,6 @@ class YouDaoSpider:
         # sign = s.hexdigest()
         # # ts
         # ts = str(int(time.time() * 1000))
-        return salt, ts, sign
 
         # return ts, salt, sign
 
@@ -72,12 +68,9 @@ class YouDaoSpider:
             "keyfrom": "fanyi.web",
             "action": "FY_BY_REALTlME",
         }
-        json_html = requests.post(url=self.url, data=data, headers=self.headers)
-        print(json_html.text)
-        print(json_html.status_code)
-        print(type(json_html.status_code))
-        # print(json_html)
-        # print(json_html)
+        json_html = requests.post(url=self.url, data=data, headers=self.headers).json()
+        print(json_html['translateResult'][0][0]['tgt'])
+
 
     def main(self):
         word = input("请输入查询单词：")

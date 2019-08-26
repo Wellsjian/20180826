@@ -22,7 +22,7 @@ class BaiDuTranslate(object):
 
     def get_token(self):
         html = requests.get(url=self.token_url, headers=self.headers).content.decode('utf-8')
-        pattern = re.compile(r"token:(.*?),", re.S)
+        pattern = re.compile(r"token: '(.*?)'", re.S)
         token = pattern.findall(html)[0].strip()
         pattern = re.compile(r"window.gtk = '(.*?)'", re.S)
         gtk = pattern.findall(html)[0].strip()
@@ -39,8 +39,6 @@ class BaiDuTranslate(object):
 
     def get_result(self, word):
         token,sign = self.get_sign(word)
-        print(sign)
-        print(token)
 
         data = {
             "from": "zh",
@@ -52,7 +50,7 @@ class BaiDuTranslate(object):
             "token": token,
         }
         html = requests.post(url=self.post_url, headers=self.headers, data=data).json()
-        print(html)
+        print(html["trans_result"]["data"][0]["dst"])
 
     def main(self):
         word = input("请输入要翻译单词")
@@ -63,5 +61,3 @@ class BaiDuTranslate(object):
 if __name__ == "__main__":
     spider = BaiDuTranslate()
     spider.main()
-    551517.821612
-    token: 3192e062d038acea538010ab87a61b8f

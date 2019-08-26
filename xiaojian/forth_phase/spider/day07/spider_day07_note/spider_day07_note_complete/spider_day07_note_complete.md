@@ -289,7 +289,20 @@ browser.switch_to_window(all_handles[1])
 ```mysql
 # 建库
 create database govdb charset utf8;
-use govdb;
+create table province(
+p_name varchar(20),
+p_code varchar(20)
+)charset=utf8;
+create table city(
+c_name varchar(20),
+c_code varchar(20),
+c_father_code varchar(20)
+)charset=utf8;
+create table county(
+x_name varchar(20),
+x_code varchar(20),
+x_father_code varchar(20)
+)charset=utf8;
 # 建表
 create table province(
 p_name varchar(20),
@@ -521,6 +534,8 @@ print(ele.text)
 - **1、F12抓包,找到json的地址,观察查询参数**
 
   ```python
+  sudo pip3 install pyexecjs
+  
   1、POST地址: https://fanyi.baidu.com/v2transapi
   2、Form表单数据（多次抓取在变的字段）
      from: zh

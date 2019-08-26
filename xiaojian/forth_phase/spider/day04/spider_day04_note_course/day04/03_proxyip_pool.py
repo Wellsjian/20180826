@@ -53,7 +53,7 @@ class GetProxyIP(object):
     for i in range(1,1001):
       url = self.url.format(i)
       self.get_ip_file(url)
-      time.sleep(random.randint(5,10))
+      time.sleep(random.randint(0,1))
 
 if __name__ == '__main__':
   spider = GetProxyIP()

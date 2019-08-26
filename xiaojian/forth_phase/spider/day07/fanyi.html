@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,41 +16,41 @@
     /* 配置需要统计的模块，以及整体的抽样率，不需要的模块不配置即可（可点击上面的模块名称自动隐藏） */
     window.alogObjectConfig = {
         sample: '1', // 配置整体的抽样率（下面各个统计模块的抽样是在此基础上进行的再抽样），https协议的网页必须配置(需要保证抽样后的PV控制在100万以内)，http的可以不配置（默认为1）
- 
+
         product: '156',  // 必须, DP平台产品线id
         page: '156_1',  // 必须, DP平台页面id
         monkey_page: '',  // 如果页面已经有hunter平台的monkey，则为monkey的pageId, 否侧无需该字段
         speed_page: '',  // 如果页面已经有webspeed平台的性能监控，则为性能的page_id,否侧无需该字段
- 
+
         // 性能----------------------------------------------------------------------------------
         speed: {
             sample: '0.2'   // 抽样率, 0~1，建议使采样的pv控制在100万以内，必须要设定，否则统计不会生效
             //custom_metrics: ['c_item1','p_item3']  //自定义的性能指标，自动上报，只有这些指标都统计完毕之后数据才会发送
             //special_pages: [{id:34, sample:1}]  // 特殊页面，和老的性能配置一致
         },
- 
+
         // 访问和点击----------------------------------------------------------------------------
         monkey: {
             sample: '0.2'   // 抽样率, 0~1  建议使采样的pv控制在50万以内，必须要设定，否则统计不会生效
             //hid: ''       // 兼容hunter的monkey，monkey实验的ID
             //pageflag: ''  // 个别特殊产品线使用hunter的monkey的pageflag
         },
- 
+
         // js异常，配合FIS插件还可以自动加try/catch监控，详见‘帮助文档’--------------------------
-        exception: { 
+        exception: {
             sample: '0.05'   // 抽样率, 0~1  建议使采样的pv控制在50万以内，必须要设定，否则统计不会生效
         },
- 
+
         // 浏览器新特性(H5/CSS3)-----------------------------------------------------------------
         feature: {
             sample: '0.05'   // 抽样率, 0~1  建议使采样的pv控制在50万以内，必须要设定，否则统计不会生效
         },
- 
+
         // 自定义事件，详见‘帮助文档’------------------------------------------------------------
         cus: {
             sample: '0.05'   // 抽样率, 0~1  必须要设定，否则统计不会生效
         },
- 
+
         // 跨站资源监控--------------------------------------------------------------------------
         csp: {
             sample: '0.05',  // 抽样率, 0~1  建议使采样的pv控制在100万以内，必须要设定，否则统计不会生效
@@ -61,7 +62,7 @@
             ]
         }
     };
- 
+
     void function(a,b,c,d,e,f,g){a.alogObjectName=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=a[e].l||+new Date,d="https:"===a.location.protocol?"https://fex.bdstatic.com"+d:"http://fex.bdstatic.com"+d;var h=!0;if(a.alogObjectConfig&&a.alogObjectConfig.sample){var i=Math.random();a.alogObjectConfig.rand=i,i>a.alogObjectConfig.sample&&(h=!1)}h&&(f=b.createElement(c),f.async=!0,f.src=d+"?v="+~(new Date/864e5)+~(new Date/864e5),g=b.getElementsByTagName(c)[0],g.parentNode.insertBefore(f,g))}(window,document,"script","/hunter/alog/alog.min.js","alog"),void function(){function a(){}window.PDC={mark:function(a,b){alog("speed.set",a,b||+new Date),alog.fire&&alog.fire("mark")},init:function(a){alog("speed.set","options",a)},view_start:a,tti:a,page_ready:a}}();
     void function(n){var o=!1;n.onerror=function(n,e,t,c){var i=!0;return!e&&/^script error/i.test(n)&&(o?i=!1:o=!0),i&&alog("exception.send","exception",{msg:n,js:e,ln:t,col:c}),!1},alog("exception.on","catch",function(n){alog("exception.send","exception",{msg:n.msg,js:n.path,ln:n.ln,method:n.method,flag:"catch"})})}(window);
 </script>
@@ -71,7 +72,7 @@
             (function() {
               var hm = document.createElement("script");
               hm.src = "//hm.baidu.com/hm.js?64ecd82404c51e03dc91cb9e8c025574";
-              var s = document.getElementsByTagName("script")[0]; 
+              var s = document.getElementsByTagName("script")[0];
               s.parentNode.insertBefore(hm, s);
             })();
         </script>
@@ -807,8 +808,8 @@ YZ
                 {{/if}}
                 {{if value.dst}}
                     <p class="ordinary-output target-output clearfix"
-                        {{if (tplData['jpData'] && tplData['japanChecked'] === true) 
-                                || (tplData['lmData'] && tplData['luomaChecked'] === true) 
+                        {{if (tplData['jpData'] && tplData['japanChecked'] === true)
+                                || (tplData['lmData'] && tplData['luomaChecked'] === true)
                                 || (tplData['lmData'] && tplData['chinaChecked'] === true)}}
                              style="display:none;"
                         {{/if}}
@@ -958,7 +959,7 @@ YZ
     <div class="trans-ad-app-wrap hide">
         <a class="trans-ad-app-control" href="javascript:void(0);"></a>
         <a title="二维码下载" class="trans-ad-app" target="_blank" href="http://fanyi.baidu.com/appdownload/download.html"></a>
-    </div>   
+    </div>
 </script>
 <script type="text/html" id="tplSideAd">
     <div class="trans-side-ad-wrap hide">
@@ -972,18 +973,18 @@ YZ
             </a>
         </div>
         <div class="side-ad-control"><a href="{{url}}" target="_blank" class="side-ad-link">{{title}}<span class="side-ad-arr"></span></a></div>
-    </div>   
+    </div>
 </script>
 <script type="text/html" id="tplLongTextPrompt">
     <div class="long-text-prompt-wrap">
         <p>{{message}}</p>
-    </div> 
+    </div>
 </script>
 <div class="flash" style="font-size:0;width:0;height:0;overflow:hidden;position:absolute;left:-999999em;z-index:-9999;">
 <img id="btpm-swf-src" src="//fanyi.bdstatic.com/static/translation/widget/translate/common/flash/bt_e981bce.swf" style="display:none;" alt="" />
 <div class="bt-flash" style="width:0;height:0;font-size:0;overflow:hidden;"></div>
 </div>
-<div id="sideAdData" style="display:none;" 
+<div id="sideAdData" style="display:none;"
         data-path="https://gss0.bdstatic.com/70cFfyinKgQIm2_p8IuM_a/daf/pic/item/91529822720e0cf33ea532140446f21fbf09aa8b.jpg"    data-title="竞技PK赢八万奖学金"    data-url="https://fanyi-app.baidu.com/static/react-activity/page/spellingBeeS2.html?fr=pc" >
 </div>
 </div>
@@ -1393,7 +1394,7 @@ YZ
     <div id="festival-link-container">
         <div class="festival-link-date-container icon-date">
             <span class="festival-link-date-decade festival-link-date-num-1"></span>
-            <span class="festival-link-date-unit festival-link-date-num-6"></span>
+            <span class="festival-link-date-unit festival-link-date-num-9"></span>
         </div>
         {{if hasJump}}
             <a href="{{url}}" target="_blank" id="festival-link">{{jumpText}}</a>
@@ -3587,7 +3588,7 @@ YZ
 <script type="text/template" id="tplDictZonedword">
     <div class="dictionary-output">
         <div class="dictionary-title clearfix">
-            {{if tplData['voice'] && tplData['voice'].length > 0}}      
+            {{if tplData['voice'] && tplData['voice'].length > 0}}
                 <div class="dictionary-spell" {{if tplData['dir'] == 'rtl'}}style="float:right;"{{/if}}>
                     {{each tplData['voice'] as voice}}
                         {{if voice['en_phonic']}}
@@ -3606,10 +3607,10 @@ YZ
                                 <span class="icon-sound sound-btn"></span>
                             </a>
                         </span>
-                        {{/if}} 
+                        {{/if}}
                     {{/each}}
                     </span>
-                
+
                 </div>
             {{/if}}
         </div>
@@ -3844,7 +3845,7 @@ YZ
 <script>
     void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
 </script>
-<div id="overall-toast" class="overall-toast overall-toast-hide"><span></span></div><script src="//passport.baidu.com/passApi/js/uni_login_wrapper.js?cdnversion=201908162023"></script></div>
+<div id="overall-toast" class="overall-toast overall-toast-hide"><span></span></div><script src="//passport.baidu.com/passApi/js/uni_login_wrapper.js?cdnversion=201908190840"></script></div>
 
 <div id="outdated">
 <h6>您的浏览器版本太低，将不能正常使用百度翻译！</h6>
@@ -3854,9 +3855,9 @@ YZ
 
 <script>
 window['common'] = {
-    token: '07a5d19196b20f5d831717f155e09ea7',
-    systime: '1565958237352',
-    logid: 'da5c5831940850c0c6369fc99a59f4c4',
+    token: '3192e062d038acea538010ab87a61b8f',
+    systime: '1566175226991',
+    logid: 'ae15f40bc1c03670335f26182f0e04f0',
     langList: {
                 'zh': '中文','jp': '日语','jpka': '日语假名','th': '泰语','fra': '法语','en': '英语','spa': '西班牙语','kor': '韩语','tr': '土耳其语','vie': '越南语','ms': '马来语','de': '德语','ru': '俄语','ir': '伊朗语','ara': '阿拉伯语','est': '爱沙尼亚语','be': '白俄罗斯语','bul': '保加利亚语','hi': '印地语','is': '冰岛语','pl': '波兰语','fa': '波斯语','dan': '丹麦语','tl': '菲律宾语','fin': '芬兰语','nl': '荷兰语','ca': '加泰罗尼亚语','cs': '捷克语','hr': '克罗地亚语','lv': '拉脱维亚语','lt': '立陶宛语','rom': '罗马尼亚语','af': '南非语','no': '挪威语','pt_BR': '巴西语','pt': '葡萄牙语','swe': '瑞典语','sr': '塞尔维亚语','eo': '世界语','sk': '斯洛伐克语','slo': '斯洛文尼亚语','sw': '斯瓦希里语','uk': '乌克兰语','iw': '希伯来语','el': '希腊语','hu': '匈牙利语','hy': '亚美尼亚语','it': '意大利语','id': '印尼语','sq': '阿尔巴尼亚语','am': '阿姆哈拉语','as': '阿萨姆语','az': '阿塞拜疆语','eu': '巴斯克语','bn': '孟加拉语','bs': '波斯尼亚语','gl': '加利西亚语','ka': '格鲁吉亚语','gu': '古吉拉特语','ha': '豪萨语','ig': '伊博语','iu': '因纽特语','ga': '爱尔兰语','zu': '祖鲁语','kn': '卡纳达语','kk': '哈萨克语','ky': '吉尔吉斯语','lb': '卢森堡语','mk': '马其顿语','mt': '马耳他语','mi': '毛利语','mr': '马拉提语','ne': '尼泊尔语','or': '奥利亚语','pa': '旁遮普语','qu': '凯楚亚语','tn': '塞茨瓦纳语','si': '僧加罗语','ta': '泰米尔语','tt': '塔塔尔语','te': '泰卢固语','ur': '乌尔都语','uz': '乌兹别克语','cy': '威尔士语','yo': '约鲁巴语','yue': '粤语','wyw': '文言文','cht': '中文繁体'    },
     account: {
@@ -3882,7 +3883,7 @@ window['common'] = {
     pdfHit: '0' === '1' ? true : false,
     defaultNavList: '[2,1,0,3,4,6,5,7,10,8,13,14,11,12,15,9]',
     ownerNavList: '[]'
-}  
+}
 </script>
 <script>window.bdstoken = '';window.gtk = '320305.131321201';</script>
 <script type="text/javascript" src="//fanyi.bdstatic.com/static/translation/lib/third_party/mod_b80b8f9.js"></script>
@@ -3973,7 +3974,7 @@ window['__abbaidu_2008_subidgetf'] = function () {
 <script src="/yjs-cgi/scripts/psl.min.js"></script>
 <script async=true src="/yjs-cgi/scripts/shitong.js"></script>
 
-<script>window['yjs_js_challenge_token']='02b6c558b66254bcee61a3424b1257de65bb2a78_1565958237'</script>
+<script>window['yjs_js_challenge_token']='dd6d10bb8307e0f4ac7df6de0a0495678d5c0428_1566175227'</script>
 <script>
 (function(){function Q(e){var d=e||window.event;d={x:d.clientX,y:d.clientY};d.x||(d=(e||window.event).touches[0],e=Number(d.pageX).toFixed(0),d=Number(d.pageY).toFixed(0),d={x:e,y:d});return d}function R(e,d,l){d=B.enc.Utf8.parse(d);l=B.enc.Utf8.parse(l);e=B.enc.Utf8.parse(e);return B.AES.encrypt(e,d,{iv:l}).ciphertext.toString(B.enc.Base64)}function E(e){var d=new XMLHttpRequest;d.open("POST","/yjs-cgi/security/js_challenge/verify?token="+window.yjs_js_challenge_token,!1);d.send(e);O=!0}function S(e,
 d){var l;return function(){e&&(l=e.apply(d||this,arguments),e=null);return l}}var B=B||function(e,d){var l={},p=l.lib={},r=function(){},t=p.Base={extend:function(g){r.prototype=this;var a=new r;g&&a.mixIn(g);a.hasOwnProperty("init")||(a.init=function(){a.$super.init.apply(this,arguments)});a.init.prototype=a;a.$super=this;return a},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var g in a)a.hasOwnProperty(g)&&(this[g]=a[g]);a.hasOwnProperty("toString")&&
