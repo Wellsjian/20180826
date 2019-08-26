@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /*1.標籤選擇器,根據標籤名匹配所有相應元素應用樣式*/
+        h1{
+            color:green
+            }
+        /*2.id選擇器,根據元素id來匹配*/
+        #d1{
+            font-size:60px;
+            }
+        /*3.類選擇器,根據元素的class屬性來匹配相應元素*/
+        .c1{
+            background:orange
+            }
+        .c2{
+            width:200px;
+            }
+        /*組合選擇器,匹配類名爲c1的h2元素*/
+        h2.c1{
+            height:200px;
+            }
+        /*4.羣組選擇器:將選擇器組合起來,統一爲元素設置樣式*/
+        h2,h3,h4{
+            font-size:30px
+            }
+        /*5.後代選擇器:匹配所有符合元素的後代元素*/
+        div span{
+            color:red;
+            }
+        /*6.子代選擇器:匹配所有滿足選擇器的直接後代*/
+        div>span{
+            background:cyan;
+            }
+        /*7.僞類選擇器:爲元素的不同狀態分別設置元素樣式,需要和基礎選擇器一同使用*/
+        /*
+        超鏈接僞類:
+            :link 超鏈接訪問前的狀態
+            :visited 超鏈接訪問後的狀態
+        動態僞類:
+            :hover 鼠標劃過或則是懸停的狀態
+            :active 鼠標點按的狀態 激活狀態
+            :focus 表單控件的焦點狀態 輸入框的編輯狀態
+        */
+        */
+        <!--a:link{-->
+            <!--color:black-->
+            <!--}-->
+        <!--a:visited{-->
+            <!--color:gray-->
+            <!--}-->
+        <!--a:hover{-->
+            <!--font-size:30px;-->
+            <!--}-->
+        <!--a:active{-->
+            <!--background:orange-->
+            <!--}-->
+            /*
+        /*
+            1.統一設置超鏈接四種狀態下的樣式
+            2.單獨設置鼠標懸停時的狀態
+            */
+        a{
+            color:black;
+            /*取消超鏈接額下劃線*/
+            text-decoration:none
+            }
+        a:hover{
+            color:orange;
+            }
+        /*創建H5標籤,設置初始尺寸和背景空間,鼠標懸停時修改背景顏色*/
+
+        h5{
+            font-size:40px;
+            background:red;
+            }
+        h5:hover{
+            background:pink;
+            }
+        /*取消表單控件在焦點轉檯下的輪廓線*/
+        input:focus{
+            outline:none;
+            }
+
+    </style>
+</head>
+<body>
+    <input type="text">
+    <h5>有練習了</h5>
+    <a href="01_form.html">表單應用頁</a>
+    <div>
+        <span>div--->span</span>
+        <p>
+            <span>div-->p-->span</span>
+        </p>
+    </div>
+    <!--基礎選擇器-->
+    <!--1.標籤選擇器-->
+    <h1 class="c1 c2">標籤選擇器</h1>
+    <h1 id="d1" class="c1">id選擇器</h1>
+    <h1>類選擇器</h1>
+    <h2 class="c1 c2">濛濛</h2>
+    <img src="happy.gif" title="happy" alt="此處爲圖片">
+    <a href="happy.gif">書中自有黃金屋</a>
+    <h3>仰天大笑出門去</h3>
+    <h4>我輩豈是蓬蒿人</h4>
+</body>
+</html>

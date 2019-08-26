@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var year = prompt("請輸入年份:")
+        var month = prompt("請輸入月份:")
+        var day = Number(prompt("請輸入日期:"))
+        var sum = 0;
+        //1.整月天數的累加   最多取到11月
+
+        var i = 1;
+        var sum = 0;
+        while(i < month){
+            switch(i){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    var number = 31;
+                    break;
+                case 2:
+                    var number = 28;
+                    if(year%4==0&&year%100!=0||year%400==0){
+                        number++;
+                        }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    var number = 30;
+                    break;
+                    }
+            sum += number;
+            i++;
+            }
+        sum += day;
+        console.log(sum)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

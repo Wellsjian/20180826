@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1.字符串的创建
+        var str = "王"
+        var str1 = new String("园丁")
+        console.log(str)
+        console.log(str1)
+        //2.字符串按照数组的结构存储,可以使用操作数组的方法来操控字符串
+        console.log(str[0],str1[0])
+        //.遍历字符串
+        for(var i in str1){
+            console.log(str1[i])
+            }
+        //.字符串方法
+        /*转换字母大小写*/
+        var str2 = "Hello world, hello you"
+        var s1 = str2.toUpperCase()
+        var s2 = str2.toLowerCase()
+        console.log(s1)
+        console.log(s2)
+        /*获取指定下标对应的字符或则字符编码*/
+        var r3 = str2.charAt()
+        var r4 = str2.charCodeAt()
+        console.log(r3,r4)
+        /*获取指定字符的下标*/
+        var r5 = str2.indexOf("o",2)
+        var r6 = str2.lastIndexOf("o")
+        console.log(r5,r6)
+        /*截取字符串*/
+        var r8 = str2.substring(0,10)
+        console.log(r8)
+        /*分割字符串*/
+        var r9 = str2.split("o")
+        console.log(r9)
+        //3.模式匹配
+        var str = "上知乎,搜知乎,问知乎,答知乎"
+        //match
+        var r1 = str.match("知乎")
+        //定义正则来查找内容
+        var regexp = /知乎/g;
+        var re2 = str.match(regexp)
+        console.log(re2)
+        //replace查找并替换,返回后替换的字符串
+        var regexp2 = /知乎/g;
+        var re3 = str.replace(regexp2,"掘金")
+        console.log(str,re3)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

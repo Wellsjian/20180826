@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:green;
+            }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        /* 事件对象:保存与当前事件相关的所有信息,伴随事件发生自动创建,自动作为参数传递到事件
+        处理函数中,我们只需要在事件处理函数中定义形参即可*/
+        //鼠标事件
+        /*鼠标事件对象 主要保存鼠的位置信息
+        offsetx offsety :获取鼠标在元素坐标系的位置*/
+        div.onclick = function (event){//e evt event
+            console.log('单击',event,event.offsetX,event.offsetY);
+            };
+        div.ondblclick = function (evt){
+            //console.log("双击");
+            };
+        div.onmouseover = function (evt){
+            //console.log("我进来了")
+            }
+        div.onmouseout = function (evt){
+            //console.log("我出去了")
+            }
+        div.onmousemove = function (evt){
+            //console.log("我要移动了")
+            }
+        //键盘事件(了解)
+        /*键盘事件对象
+        onkeydown:获取事件对象的which,功能返回键盘编码,字符键一律返回大写字母的ASC编码
+        onkeypress:获取事件对象的which,功能返回键盘编码,字符键返回字母的ASC编码区分大小写*/
+        onkeydown = function (evt){
+            console.log("onkeydown",evt,evt.key,evt.which)
+            }
+        onkeypress = function (evt){
+            //console.log("onkeypress")
+           }
+        onkeyup = function (evt){
+           //console.log("onkeyup")
+           }
+    </script>
+</body>
+</html>

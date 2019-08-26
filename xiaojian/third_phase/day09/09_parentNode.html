@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div>
+        <p>参考</p>
+        <h1 id="d1" class="c1">
+            <span>
+                h1->>span
+            </span>
+        </h1>
+        <p>参考</p>
+    </div>
+    <script>
+        var h1 = fun1("h1")
+        var div = fun1("div")
+        //获取唯一的父元素
+        //console.log(h1.parentNode)
+        //获取子节点数组  包含文本节点和元素节点
+        //console.log(div.childNodes)
+        //获取子元素数组  只包含直接子元素
+        //console.log(div.children)
+        //获取兄弟节点
+        console.log(h1.previousSibling)
+        console.log(h1.nextSibling)
+        //获取兄弟元素节点
+        //console.log(h1.previousElementSibling)
+        //console.log(h1.nextElementSibling)
+        //获取属性节点数组
+        //console.log(h1.attributes)
+        //元素节点的创建 添加 删除
+        //1.创建
+        //var h2 = document.createElement("h2")
+        //2.动态添加
+        //h2.innerHTML = "动态添加"
+        //h2.id = "d2"
+        //添加节点  只能有父节点来进行
+        //追加到末尾
+        //document.body.appendChild(h2)
+        //节点与页面中的元素是一一对应的,有一个元素界需要创建一个节点
+        //div.appendChild(h2)
+        //指定位置添加
+        //var h3 = document.createElement("h3")
+        //document.body.insertBefore(h3,h2)
+        //3.移除节点
+        //h1.removeChild(span)
+
+        /*实现网页轮播图
+            1.通过图片的隐藏和显示
+            2.通过更改图片的路径
+        参照效果添加元素*/
+    </script>
+</body>
+</html>

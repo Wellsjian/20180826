@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.11.3.js"></script>
+    <script>
+        window.onload = function (){
+            //获取父元素
+            $("p").parent().css({
+                "height":"300px",
+                "width":"300px",
+                "background":"red",});
+            //获取祖先元素
+            $("p").parents().attr("id","d1");
+            //获取直接子元素
+            $("div").children().css("background","blue");
+            $("div").children("p").css("color","blue");
+            //获取所有后代元素;
+            $("div").find("span").css("background","green");
+            //获取前后相邻的兄弟元素
+            console.log($("p").prev());
+            console.log($("p").next());
+            //获取所有的兄弟元素
+            console.log($("p").siblings());
+
+
+
+            //2.元素的创建
+            var h1 = $("<h1>动态创建</h1>");
+            var h2 = $("<h2></h2>");
+            h2.html("二级标题").css("background","green").attr("class","c2");
+            //添加节点
+            //作为子元素添加到父元素的头尾
+            $("#d1").append(h1); //追加到末尾
+            $("#d1").prepend(h2); //追加到开头
+            //添加兄弟元素
+            $("p").after(h1).before(h2);
+            /*
+            创建h3h4元素节点,作为div的头尾子元素添加到页面
+            在创建两个a标签,显示在h3后h4前*/
+            var h3 = $("<h3>三级标题</h3>")
+            var h4 = $("<h4></h4>")
+            h4.html("四级标题");
+            $("#d1").append(h3).prepend(h4);
+            h3.after($("<a href>1</a>"));
+            h4.before($("<a href>2</a>"));
+            //移除元素  remove
+            }
+
+    </script>
+</head>
+<body>
+    <div>
+        <b>加粗</b>
+        <span>测试</span>
+        <p>
+            好啊
+            <span>风雨欲来山满楼</span>
+        </p>
+        <span>测试</span>
+        <b>加粗</b>
+    </div>
+
+</body>
+</html>

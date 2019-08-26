@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //循環輸出100次
+        var i = 101;
+        do{
+            console.log("明天會更好");
+            i++;
+            }while(i<101)
+        i = 101;
+        while (i < 101){
+            console.log("堅持就是勝利");
+            i++;
+            }
+        //for循環
+        for(var i = 1; i < 101; i++){
+            console.log("相信明天的太陽依然瑰麗")
+            }
+         /*控制循環體的執行;continue  break*/
+        for(var i = 1;i < 11 ; i ++){
+            console.log(i);
+            if(i==5){
+                continue
+                }
+            console.log("****************")
+            }
+        //循環接收用戶輸入,並且在用戶中打印,直到用戶輸入exit表示退出
+        /* while(true){
+            var massage = prompt("請輸入內容:")
+            if(massage == "exit"){
+                break;
+                }
+            console.log(massage)
+            }
+        do{
+            var massage = prompt("請輸入內容:");
+            if(massage != "exit")
+                console.log(massage);
+            }while(massage != "exit")*/
+        // 九九乘法表
+        for(var i = 1 ; i < 10; i++){
+            var s = ""
+            for(var j = 1; j <= i ; j++){
+                //拼接字符串
+                 s += j+"*"+i+"="+j*i+"\t";
+                }
+            console.log(s)
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

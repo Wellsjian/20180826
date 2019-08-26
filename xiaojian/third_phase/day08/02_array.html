@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1.数组的创建
+        var array1 = ["超哥哥",30,true]
+        /*console.log(array1)*/
+        //使用new关键字创建
+        var array2 = new Array("小泽",31,false)
+        console.log(array2)
+        //3.特殊情况
+        var array3 = [5]
+        /*使用new关键字传递一个整数创建的数组,表示的是数组的长度*/
+        var array4 = new Array(5)
+        console.log(array3,array4)
+        //2.根据数组的索引来操作元素
+        console.log(array1[2])
+        array2[1] = "大旭"
+        console.log(array2)
+        array1[8] = 'AI'
+        console.log(array1)
+        //3.数组对象的属性:length
+        console.log(array4.length)
+        //4.遍历数组
+        //普通for循环
+        /* for(var i = 0;i < array1.length;i++){
+            console.log(array1[i])
+            }
+        for(var i = array1.length-1;i >= 0;i--){
+            console.log(array1[i])
+            }
+        console.log("******************************************")*/
+        //快速for-in循环
+        /*for(var i in array1){
+            console.log(i,array1[i])
+            }
+        console.log("******************************************")*/
+        //.数组对象提供的遍历方法,forEach(function (){})
+        /*array1.forEach(function (element,index){
+            console.log(element,index)
+            })*/
+
+        /*循环接收用户输入,将数据存储在数组中,直至输入为(exit),借宿结束,在控制台中打印数组*/
+        /*var i = 0;
+        array1 = []
+        while(true){
+           var msg = prompt("请输入相关内容;");
+           if(msg == "exit"){
+               break;
+               }
+           array1[i] = msg;
+           i++;
+           }
+        for(var j in array1){
+           console.log(array1[j])
+           }*/
+
+        //遍历最大值
+        /*array2 = [1,5,8,4,48,65,19,34]
+        max = array2[0]
+        for(i in array2){
+            if(array2[i] > max){
+                max = array2[i]
+                }
+            }
+        console.log(max)*/
+
+        //定义数组,接收用户输入的内容,查询数据存在,存在返回下标,不存在返回-1
+
+        /*function show(){
+            var array2 = [1,5,8,4,48,65,19,34]
+            var msg = prompt("请输入要查询的数据:")
+            for(var i in array2){
+                if(array2[i] == msg){
+                    return i
+                    }
+                else{
+                    continue
+                    }
+            return -1
+                }
+            }
+        console.log(show())*/
+
+        //查找最后一次出现的位置
+
+        function show(){
+            var array2 = [1,5,8,4,48,65,19,34,1]
+            var msg = prompt("请输入要查询的数据:")
+            var flag = -1
+            for(var i = array2.length-1;i>=0;i--){
+                if(array2[i] == msg){
+                    flag = i
+                    return flag
+                    }
+                else{
+                    continue
+                    }
+            return flag
+                }
+            }
+        console.log(show())
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

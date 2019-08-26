@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+         window.onload = function (){
+            //窗口加载完毕后执行
+            console.log("window.onload");
+
+        //获取到焦点
+        uname.onfocus = function (){
+            console.log("onfocus");
+            }
+        //失去焦点
+        uname.onblur = function (){
+            //.this  指代事件的触发对象或函数的调用者
+            console.log("onblur",this.value)
+            }
+        //实时监听对象
+        uname.oninput = function (){
+            console.log("oninput",this.value)
+            }
+
+        //监听前后两次输入内容是否一致
+        uname.onchange = function (){
+            //只有前后两次输入不一致,并且失去焦点是才触发
+            console.log("onchange", this.value)
+            }
+
+        //监听按钮状态的改变
+        sex.onchange = function (){
+            //按钮只有两种状态,对应checked的true和false状态
+            console.log(this.checked);
+            }
+
+        //监听表单中的数据是否可以提交
+        /*交由form元素来监听,在点击提交按钮时触发 允许返回布尔值*/
+        form.onsubmit = function (){
+            if( uname.value == ""){
+                return false;
+                }else{
+                return true;
+                }
+                }
+        }
+    </script>
+</head>
+<body>
+    <form action="/login" method="get" enctype="" id="form">
+        用户姓名:<input type="text" name="uname" id="uname"><br>
+        用户性别:<input type="radio" id="sex"><br>
+        提交按钮:<input type="checkbox" checked><br>
+        <input type="submit">
+    </form>
+    <ul>
+        <li>
+            <span id="city">北京</span>
+            <ol id="ol">
+                <li >北京</li>
+                <li>上海</li>
+                <li>广州</li>
+                <li>深圳</li>
+            </ol>
+        </li>
+    </ul>
+    <script>
+        console.log("测试")
+        /*实现下拉菜单的点击传值*/
+        //获取内层ｌｉ元素
+        var list = ol.children;
+        for(var i = 0; i < list.length; i++){
+            list[i].onclick = function (){
+                //传值 this 代替事件的触发对象
+                city.innerHTML = this.innerHTML;
+                }
+            }
+    </script>
+</body>
+</html>

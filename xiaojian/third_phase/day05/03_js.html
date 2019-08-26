@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.write("<h1>動態添加</h1>")
+        console.log("hello word")
+    </script>
+    <script src="index.js">
+        //使用src來引入外部的js文件
+        console.log('哈哈');
+    </script>
+</head>
+<body>
+    <!--元素綁定事件  用戶的行爲  元素的狀態
+    網頁彈框
+    alert("")網頁警告框-->
+    <h1 onclick="document.write('<h1>哈哈s</h1>')">點擊</h1>
+    <!--通過script標籤來書寫js語句-->
+    <script>
+        //單行註釋
+        /*多行註釋*/
+        console.log("控制檯輸出");
+        //帶有用戶輸入的輸入框
+        //prompt("請輸入姓名:")
+        document.write("<h1>動態添加</h1>")
+    </script>
+</body>
+</html>

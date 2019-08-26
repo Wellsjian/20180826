@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1.操作数组的头尾元素
+        var array = ["hello word","hello world","hello wod"]
+        //在末尾追加元素,返回值为数组长度array.push(1,2,3)
+        var r1 = array.push(1,2,3)
+        console.log(array,r1)
+        //在末尾移除元素,返回值为移除的元素array.pop()
+        var r2 = array.pop()
+        console.log(r2)
+        //在头部添加元素array.unshift(10)
+        var r3 = array.unshift(10)
+        r3 = array.unshift(20,30)
+         console.log(array)
+        //在头部移除元素array.shift()
+        var r4 = array.shift()
+        console.log(array)
+
+        //2.转换字符串array.toString()
+        var r5 = array.toString()
+        console.log(r5,array)
+        var r6 = array.join("*")
+        console.log(r6,array)
+
+        //3.数组元素的反转  会改变原有的数据结构
+        var r7 = array.reverse()
+        console.log(array)
+
+        //4.数组排序 会调整原来的的数据结构
+        //默认按照字符的Unicode编码来升序排序
+        var r8 = array.sort()
+        console.log(r8)
+        //.对number的值大小进行排序 a,b代表数据中相邻的两个元素 返回值大于0 交换元素的位置
+        //.默认为升序排列
+        array.sort(function(a,b){return a-b})
+        console.log(array)
+        //.自定义降序排列
+        array.sort(function(a,b){return b-a})
+        console.log(array)
+
+        //5.复杂数组
+        var obj = {
+            uid:001,
+            uname:"大旭",
+            play:function (){
+                console.log("play")
+                }
+            };
+        console.log(obj.uid)
+        obj.play()
+
+        var obj1 = [
+            {uname:"小泽",age:35},
+            {uname:"大旭",age:33},
+            {uname:"超哥哥",age:31}
+            ]
+        console.log(obj1[0].age)
+        obj1.sort(function(a,b){return a.age-b.age})
+        console.log(obj1)
+
+        //代码实现十进制转换二进制 除以2取余 余数倒序排列
+
+        var number = prompt("输入要转换的数字:")
+        var array4 = []
+        while(number != 0){
+            array4.unshift(number % 2)
+            number = parseInt(number / 2)
+            }
+        a2 = array4.join("")
+        console.log(a2)
+
+        //二维数组
+        var array5 = [
+        [1],
+        [2,3],
+        [4,5,6,7],
+        [8,9]
+        ]
+        console.log(array5[2][2])
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

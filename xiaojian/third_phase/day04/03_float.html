@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width:800px;
+            height:800px;
+            margin:0 auto;
+            background:red;
+            }
+        #d1,#d2,#d3{
+            width:200px;
+            height:200px;
+            }
+        #d1{
+            background:blue;
+            float:left;
+            }
+        #d2{
+            background:green;
+            float:right;
+            }
+        #d3{
+            background:pink;
+            float:right;
+            }
+        span{
+            float:right;
+            width:200px;
+            height:200px;
+            background:orange;
+            }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+    </div>
+    <!--脫離文檔流的元素在文檔中不在佔位-->
+    <span></span>
+</body>
+</html>

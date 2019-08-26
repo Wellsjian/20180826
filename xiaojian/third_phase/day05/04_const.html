@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*1)變量*/
+        //1.單個變量
+        var a = 100;
+        var b;
+        b = 10.2;
+        //2.多個變量
+        var c = 1 , d = 2 , e = "ni";
+        var usname, passwd,uage;
+        uname = "老師"
+        passwd = "123456"
+        age = 123456
+        console.log(a,b,c,d,e)
+        console.log(uname,passwd,age)
+        var gender;
+        //3.變量聲明未賦值時,默認爲undefined
+        console.log(gender)
+        //4.訪問未聲明,未賦值的變量時,報錯
+        /*console.log(m)*/
+        //5.省略var關鍵字定義變量 一律是全局變量 儘量不要省略
+        n = 1000;
+        console.log(n)
+        /*2)常量,一定義不能修改*/
+        const PI = 3.14
+
+        //練習 自定義半徑 結合常量PI  計算園的周長和半徑 並打印在console
+        var r = 5;
+        var l = 2*PI*r;
+        //保留n位小數 toFixed(n)
+        var s = PI*r**2;
+        console.log(l.toFixed(2),s)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

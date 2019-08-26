@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input:focus{
+            outline:none;
+            }
+
+    </style>
+</head>
+<body>
+    <form action="/login" method="post" enctype="multipart/form-data">
+        <h1>增加管理員</h1>
+        <table>
+            <tr>
+                <td>姓名: </td>
+                <td><input type="text" name="username" placeholder="" maxlength="10"  ></td>
+                <td>10個字符以內</td>
+            </tr>
+            <tr><td>密碼:</td>
+                <td><input type="password" name="passwd" placeholder="" maxlength="10"></td>
+                <td>10個字符以內</td>
+            </tr>
+            <tr>
+                <td>性別:</td>
+                <td>
+                    <input type="radio" name="gender" value="women" id="women">
+                    <label for="women">女士</label>
+                    <input type="radio" name="gender" value="men" id="men" checked>
+                    <label for="men">男士</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>角色:</td>
+                <td>
+                    <input type="checkbox" name="super_manager" id="super_manager">
+                    <label for="super_manager">超級管理員</label><br>
+                    <input type="checkbox" name="money_manager" id="money_manager">
+                    <label for="money_manager">賬單管理員</label>
+                 </td>
+                <td>至少選擇一個角色</td>
+            </tr>
+            <tr>
+                <td>頭像:</td>
+                <td colspan="2"><input type="file" name="using"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="保存">
+                    <input type="reset" value="重填">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+</html>

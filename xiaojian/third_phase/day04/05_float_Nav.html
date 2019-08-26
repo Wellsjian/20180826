@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+            }
+        #nav{
+            width:900px;
+            height:30px;
+            background:gray;
+            }
+        .left{
+            /*方式一*/
+            width:300px;
+            float:left;
+            background:green;
+            /*方式二   先右後左*/
+            }
+        .right{
+            width:300px;
+            background:blue;
+            float:right;
+            }
+        li{
+            float:left;
+            margin-right:30px;
+            }
+        #main{
+            margin-top:50px;
+            width:900px;
+            /*解決子元素全部浮動帶動的父元素高度爲0的問題*/
+            /*1.設置父元素高度*/
+            /*height:600px;*/
+            /*2.通過overflow:hidden屬性來解決*/
+            overflow:hidden;
+            /*3.在父元素中設置屬性clear*/
+            background:pink;
+            }
+        .item1{
+            width:580px;
+            height:400px;
+            background:gray;
+            float:left;
+            }
+        .item2,.item3{
+
+            width:300px;
+            height:190px;
+            background:gray;
+            float:right;
+            }
+        .item2{
+            margin-bottom:20px;
+            }
+        #d1.#d2{
+            width:200px;
+            height:200px;
+            background:red;
+            }
+
+        #d1{
+            background:green;
+            float:left
+            }
+        #d2{
+            /*使文檔中正常元素不受前面浮動元素影響 clear:left,right,both*/
+            clear:left;
+            }
+
+        .clear{
+            clear:both;
+            }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="left">
+            <ul>
+                <li>首頁</li>
+                <li>物流</li>
+                <li>客服</li>
+            </ul>
+        </div>
+        <div class="right">右側導航</div>
+    </div>
+    <div id="main">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="clear"></div>
+        <div>聯繫我們</div>
+    </div>
+    <div id="d1"></div>
+    <div id="d2"></div>
+
+
+</body>
+</html>

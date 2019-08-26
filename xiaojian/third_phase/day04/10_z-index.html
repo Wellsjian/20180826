@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:red;
+            }
+        #d1{
+            background:green;
+            /*只有定位元素才能使用偏移屬性調位置*/
+            /*position:relative;
+            top:100px;
+            left:100px;*/
+            }
+        #d2{
+            position:relative;
+            left:100px;
+            bottom:100px;
+            }
+        #d2:hover{
+            /*調整堆疊次序,屬性z-index,取值爲無單位的整數,值越大越靠上
+            使用z-index屬性調整次序*/
+            z-index:10;
+            }
+    </style>
+</head>
+<body>
+    <!--文本中正常元素與定位元素發生堆疊,永遠是定位元素在上-->
+    <!--同爲定位元素發生堆疊.根據標籤的書寫順序,後來者居上-->
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <h1>
+        實現網頁   上方爲導航欄  列表來做  包含下拉菜單
+        輪播圖區域  包含圖片的索引  包含左右按鈕
+    </h1>
+
+</body>
+</html>

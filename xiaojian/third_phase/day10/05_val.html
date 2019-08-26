@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.11.3.js"></script>
+    <script>
+        window.onload = function (){
+            /*创建输入框.按钮,div 将输入框的值以一级标题形式显示在div中*/
+            //$("input").val()获取表单的数值
+            btn.onclick = function (){
+                //$("div").html("<h1>"+$("input").val()+"</h1>");
+                $("div").text("<h1>"+$("input").val()+"</h1>");
+                //修改输入框中的值
+                //$("input").val('哈哈');
+
+                }
+            //jquery链式调用,对同一个对象连缀调用不同方法进行操作
+            $("div").attr("id","box").prop("class","c1").html("属性操作").css("color","red");
+            getStatus.onclick = function (){
+                //获取复选框的选中状态
+                console.log($("[id='savePwd']").attr("checked"))
+                //console.log($("#savePwd").attr("checked")}
+                console.log($("[id='savePwd']").prop("checked"))
+                //console.log($("#savePwd").prop("checked")
+                $("#savePwd").removeAttr("checked")
+                }
+            }
+        /*原声JS轮播图
+            1.实现索引跟随切换 鼠标移入停止  鼠标移出重启定时器  点击左右按钮切换
+            2.实现全选和取消全选功能
+            //附加:
+                反选      */
+
+    </script>
+</head>
+<body>
+    <input type="text">
+    <button id="btn">显示</button>
+    <div></div>
+    <input type="checkbox" id="savePwd">
+    <button id="getStatus">获取</button>
+</body>
+</html>

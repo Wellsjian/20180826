@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form{
+            font-size:0;
+            }
+        #d2{
+            width:500px;
+            height:50px;
+            font-size:20px;
+            outline:none;
+            box-sizing:border-box;
+            border:1px solid red;
+
+            }
+        #d1{
+            width:150px;
+            height:50px;
+            color:#ffffff;
+            padding:0;
+            border:1px solid black;
+            vertical-align:top;
+            }
+        #nav,#search{
+            width:650px;
+            /*通過設置外邊距讓導航欄居中*/
+            margin:0 auto;
+            }
+        #nav{
+            margin-bottom:50px;
+            height:30px;
+            background:gray;
+            font-size:0;
+            }
+        a{
+            display:inline-block;
+            text-decoration:none;
+            text-align:center;
+            background:#00ff00;
+            color:red;
+            width:122px;
+            height:30px;
+            font-size:20px;
+            /*調邊距 行內塊元素完全支持盒模型*/
+            /*margin:5px 10px;*/
+            margin-right:10px;
+            /*垂直居中,實際調的是行高與高度一致*/
+            line-heigth:30px;
+            }
+        .no-margin{
+            margin:0;
+            }
+        #search{
+            background:gray;
+            width:650px;
+            height:200px;
+            }
+        input{
+            width:500px;
+            height:50px;
+            line-height:50px;
+            /*調整盒模型的計算方式,取值爲border-box時,表示當前元素指定的width/height包括邊框的內尺寸*/
+            box-sizing:border-box;
+            }
+        button{
+            width:150px;
+            height:50px;
+            /*水平方向上元素之間的垂直對齊方式,可取top middle bottom*/
+            vertical-align:top;
+            }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form action="./lodin" method="post" enctype="multipart/form-data">
+            <input type="text" name="content" id="d2">
+            <input type="submit" value="百度一下" id="d1">
+        </form>
+    </div>
+    <!--導航欄-->
+    <div id="nav">
+        <a href="">天貓</a>
+        <a href="">天貓</a>
+        <a href="">天貓</a>
+        <a href="">天貓</a>
+        <a href="" class="no-margin">天貓</a>
+    </div>
+    <div id="search">
+        <form action="./login" method="get" enctype="application/x-www-form-urlencoded">
+            <input type="text">
+            <button>百度一下</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--2.內嵌樣式,使用style標籤書寫樣式聲明,實現樣式與結構的劃分-->
+    <style>
+        /* 表示CSS中的註釋*/
+        /* 使用選擇器來匹配元素文本,爲其應用樣式*/
+        /* 標籤選擇器:根基標籤名匹配元素應用樣式*/
+        h1{
+            background:pink;
+        }
+        span{
+            color:orange;
+            }
+        span{
+            color:purple
+            }
+    </style>
+    <!--3.外部樣式表文件引入-->
+    <link rel="stylesheet" href="index.css" type="text/css">
+
+
+</head>
+<body>
+    <!--書寫樣式-->
+    <!--1.行內樣式,借住style標籤屬性,設置樣式規則-->
+    <!--CSS樣式聲明 屬性名:屬性值;-->
+    <h1 style="font-size:16px;color:blue">正常的生活又開始了</h1>
+    <h1 style="font-size:16px;color:purle">時光荏苒,我們不散</h1>
+    <h2>測試
+        <span>老王</span>
+    </h2>
+    <span>老王</span>
+    <div style="color:yellow;">
+        <p style="color:gray;">
+            <span style="color:peru;">子元素可以繼承父元素或者祖先元素的文本樣式</span>
+        </p>
+    </div>
+
+
+
+</body>
+</html>

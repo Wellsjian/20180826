@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 class="c1" id="d1" style="color:red;">Fine,Thank U,and you</h1>
+    <h1 class="c1" id="d2">岁月静好,感恩有你,与你相随</h1>
+    <input type="text" name="username" value="">
+    <button id="btn">取值</button>
+    <div id="show"></div>
+    <script>
+        //1.根据标签名获取元素 返回值为列表
+        //元素的操作 只能等待标签解析完才能执行
+        var res = document.getElementsByTagName("h1");
+        console.log(res)
+        console.log(res[0],res[0].innerHTML)
+
+        //2.根据class来获取元素的属性 返回值为列表
+        var res1 = document.getElementsByClassName('c1')
+        console.log(res1)
+
+        //3.根据id来获取元素的属性  返回值我元素节点
+        var res2 = document.getElementById('d2')
+        console.log(res2)
+
+        //标签属性都是元素节点对象的属性
+        console.log(res2.id,res2.className);
+        res2.style = "color:red;background:blue;text-align:center;"
+
+        //根据name属性来获取元素 返回值为列表
+        var re3 = document.getElementsByName('username')
+        console.log(re3)
+
+        //操作元素内容或者是值
+        res2.innerHTML = "<a href>岁月静好,感恩有你,与你同在</a>"
+        console.log(res2)
+        res2.innerText = "<a href>岁月静好,感恩有你,与你同在</a>"
+        console.log(res2)
+        btn.onclick = function (){
+            //获取表单控件的值
+            console.log(re3[0].value)
+            show.innerHTML = "<h1>"+re3[0].value+"</h1>"
+            }
+
+        //创建输入框 按钮 和div
+        //点击按钮来将输入框内容一一级标题的形式显示在div中
+
+    </script>
+</body>
+</html>

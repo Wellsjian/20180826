@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src=""></script>
+    <script>
+        var a = 10;
+        var r1 = a + 10
+        //.自增和自減
+        var b = 10;
+        //.單獨與變量結合,前綴和後綴沒有區別
+        b++;
+        ++b;
+        console.log(b)
+        //.與其他運算符結合使用 ++前綴先++  ++後綴後++
+        var r2 = b++; // r2=12 b= 13
+        var r3 = ++b  //r3=14  b=14
+        //.自增和自減運算結果永遠是轉換爲number值
+        var  s = "10";
+        s++;
+        console.log(s,typeof s)
+        //.思考
+        var n = 5;
+        var r = n++ + ++n + n++ + ++n + n;
+        /*可以寫成r = r1(5 6) + r2(7 7) + r3(7 8) + r4(9 9) + r5(9)*/
+        console.log(r,n)  //37  9
+        //2.關係運算
+        var res1 = 10 > true;  //true
+        var res2 = "10" > true; //true
+        var res3 = 10 > "true"  //false
+        var res4 = "10" > "true";  //false
+        var res5 = "10" < "true";  //true
+        var res6 = "true" > false; //false
+        console.log(res4,res5)
+        //.獲取Unicode編碼方法charCodeAt(index)
+        var s1 = "小";
+        var s2 = "超";
+        var s3 = "1";
+        var s4 = "t"
+        console.log(s1.charCodeAt(),s2.charCodeAt())
+        console.log(s3.charCodeAt(),s4.charCodeAt())
+        //.相等和全等
+        var a1 = 10 =="10";  // true
+        var a2 = 10 === "10";  //false
+
+        //.給出閏年判斷的條件  1.能被4整除且不能被100整除  2.能被400整除
+        var y = 2019;
+        var b = y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
+        console.log(b)
+        var year = prompt("請輸入年份:")
+        var b = y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
+        console.log(year,b,typeof year,typeof b)
+        //.非  對布爾值取飯
+        var r1 = !5;
+        console.log(r1)
+        var r2 = !5 < 3;
+        console.log(r2)  // true
+
+        //三目運算符
+        var a = 10;
+        if(a > 5){
+            console.log('成立');
+            }
+        else{
+            console.log('不成立');
+            }
+
+        var res = a > 5 ? 'ok' : 'error';
+        console.log(res)
+        a = 2 ;
+        var res2 = a >5 ? 'ok' : a >= 3 ? "喊吧" : "叫吧";
+        console.log(res2)
+    </script>
+</head>
+<body>
+    <h1 onclick="alert('你準備好了嗎????????')">開始</h1>
+</body>
+</html>

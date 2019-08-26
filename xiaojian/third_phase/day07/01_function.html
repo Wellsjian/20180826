@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1.無參數無返回值的函數
+        function fun1(){
+            console.log("fun1()被盜用了");
+            }
+        fun1()
+        //2.帶參數有返回值的函數  允許形參和實參的個數不匹配
+        function fun2(number){
+            //函數內部可以用arguments獲取實際的傳遞函數
+            //形參未傳值,默認爲undefined
+            var sum = 0;
+            for(var i = 1; i <= number; i ++){
+                sum += i;
+                }
+            console.log(arguments);
+            return sum;
+            }
+        console.log(fun2(100,10));
+        //3.全局變量和局部變量
+        /*
+            1.全局變量爲在函數外聲明的變量
+            2.一切省略var關鍵字的變量都是全局變量
+        */
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

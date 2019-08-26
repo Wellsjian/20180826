@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            /*border-top:1px solid red;*/
+            padding-top:0.1px;
+            }
+        div{
+            width:200px;
+            height:200px;
+            background:blue;
+            /*1.父元素添加頂部邊框,通常爲透明*/
+            margin-top:100px;
+            /*2.可以給父元素添加padding-top*/
+            margin-bottom:200px;
+            }
+        h1{
+            width:200px;
+            height:200px;
+            background:green;
+            margin-top:100px;
+            }
+        b,span{
+            background:red;
+            /*行內元素不支持垂直邊距,水平方向上外邊距會疊加顯示*/
+            margin: 50px 100px;
+            color:#fff;
+                }
+        body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+            /*取消默認樣式*/
+            margin:0;
+            padding:0;
+            /*去掉列表項目符號*/
+            list-style:none;
+            }
+    </style>
+</head>
+<body>
+    <!--第一個子元素的margin-top作用於父元素上-->
+    <!--解決-->
+    <!--1.父元素添加頂部邊框,通常爲透明-->
+    <!--2.可以給父元素添加padding-top-->
+    <div></div>
+    <!--同時設置垂直方向上的邊距,取最大值-->
+    <h1></h1>
+    <b>加粗</b>
+    <span>文本</span>
+    <form action=""></form>
+</body>
+</html>
