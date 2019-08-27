@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.11.3.js"></script>
+    <style>
+        #d1{
+            color:red;
+            }
+        .c1{
+            background:green;
+            }
+        .c2{
+            text-align:center;
+            }
+    </style>
+    <script>
+        window.onload = function (){
+            //1.操作 id class 属性对于选择器选择样式
+            $("h1:first").attr("id","d1").attr("class","c1 c2");
+            //2.直接操作class属性
+            //增加类名
+            $("div").addClass("c1 c2");
+            //删除类名
+            $("div").removeClass("c1");
+            //toggleClass()借组用户行为来切换类名,没有添加,有则删除
+            btn.onclick = function (){
+                $("div").toggleClass("c1");
+                }
+            //3.直接操作行内模式.CSS
+            $("div").css("width","200px");
+            //通过传入js对象来操作行内模式
+            $("div").css({
+                "width":"500px",
+                "height":"300px",
+                "background":"purple",
+                "font-size":"34px",
+                "margin":"0 auto",
+                "line-height":"300px"})
+            }
+    </script>
+</head>
+<body>
+    <h1>古人云:风起 云走 雨欲来</h1>
+    <h1>今人说:风起 云走 雨雨来</h1>
+    <div>风雨欲来</div>
+    <button id="btn">切换</button>
+</body>
+</html>

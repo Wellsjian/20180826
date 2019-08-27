@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var week = Number(prompt("請輸入0-6之間的數字:"))
+        switch(week){
+            case 0: //0===0
+            //變量值與case列舉的值匹配全等時執行的代碼段
+                console.log("星期日");
+                break;
+            case 1:
+            console.log("星期一");
+            break;
+            default:
+            console.log("請輸入合法的值!!!!!")
+        //多個case共用代碼段
+        var month = Number(prompt("請輸入月份:"))
+        switch(month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log("31天")
+                break;
+            case 2:
+                console.log("28天")
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*清除瀏覽器的默認樣式*/
+        body,ul,ol{
+            margin:0;
+            padding:0;
+            list-style:none;
+            }
+        a{
+            text-decoration:none;
+            color:#ddd;
+            }
+        body{
+            color:#ddd;
+            }
+         /*外圍結構的樣式*/
+        #nav,#banner{
+            width:990px;
+            margin:0 auto;
+            }
+        /*單獨設置每個模塊的設置*/
+        #nav{
+            background:green;
+            /*overflow:hidden*/
+            height:30px;
+            }
+        #nav ul>li{
+            float:left;
+            margin-left:50px;
+            line-height:30px;
+            }
+        #nav ul>li:first-child{
+            position:relative;
+            }
+        #nav ol{
+            display:none;
+            position:absolute;
+            z-index:10;
+            }
+
+        /*子元素過濾選擇器*/
+        #nav ul>li:first-child:hover ol{
+            display:block;
+            }
+        #nav ol li:hover{
+            background:orange;
+            }
+
+        /*2輪播圖*/
+        #banner{
+            margin:30px auto:
+            height:300px;
+            position:relative;
+            }
+        #banner img{
+
+            width:990px;
+            height:300px;
+            }
+        #banner ul{
+            width:150px;
+            position:absolute;
+            bottom:10px;
+            left:50%;
+            margin-left:-75px;
+            }
+        #banner li{
+            float:left;
+            width:10px;
+            height:10px;
+            background:white;
+            border-radius:50%;
+            margin-left:10px;
+            }
+        #banner ul>li:first-child{
+            margin:0
+            }
+        #banner a{
+            /*元素脫硫後,可以手動調節尺寸,默認由內容決定*/
+            position:absolute;
+            width:60px;
+            height:30px;
+            top:50%;
+            margin-top:-15px:
+            }
+        .prev{
+            left:10px;
+            }
+        .next{
+            right:10px;
+            }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li>張家口
+                <ol>
+                    <li>張北</li>
+                    <li>張家口</li>
+                    <li>康寶</li>
+                    <li>沽源</li>
+                </ol>
+            </li>
+            <li>訂單</li>
+            <li>範圍</li>
+        </ul>
+    </div>
+    <div id="banner">
+        <img src="wxy.jpeg" alt="">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <a href="javascript:void(0)" class="prev">&lt;</a>
+        <a href="javascript:void(0)" class="next">&gt;</a>
+    </div>
+
+</body>
+</html>

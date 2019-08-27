@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1{
+            width:300px;
+            height:300px;
+            background:pink;
+            }
+        #d1{
+            border:solid;
+            }
+        #d2{
+            border:5px dotted blue;
+            }
+        #d3{
+            border:5px dashed green;
+            }
+        #d4{
+            border:5px double red
+            }
+        #d6{
+            width:200px;
+            height:200px;
+            border-top:10px solid red;
+            border-right:10px solid blue;
+            border-bottom:10px solid green;
+            border-left:10px solid purple;
+
+            }
+        div{
+            /*width:0px;
+            height:0px;
+            border-top:100px solid red;
+            border-right:100px solid rgba(0,0,0,0);
+            border-bottom:100px solid transparent;
+            border-left:100px solid transparent;
+            */
+            width:0px;
+            height:0px;
+            border:100px solid transparent;
+            border-bottom:100px solid red;
+             }
+        span{
+            /*display:inline-block;
+            width:0px
+            height:0px*/
+            /*行內元素不能手動調寬高,控標籤默認寬度爲0,默認高度與字體大小有關,可以實現字體大小爲0
+            體現高度爲0的情況*/
+            font-size:0;
+            border-top:10px solid red;
+            border-right:10px solid green;
+            border-bottom:10px solid blue;
+            border-left:10px solid purple;
+            }
+
+    </style>
+</head>
+<body>
+    <!--<div id="d6"></div>-->
+    <!--<div></div>-->
+
+    <!--<h1 id="d1"></h1>-->
+    <!--<h1 id="d2"></h1>-->
+    <!--<h1 id="d3"></h1>-->
+    <!--<h1 id="d4"></h1>-->
+    <!--<h1 id="d5"></h1>-->
+
+    <span></span>
+</body>
+</html>

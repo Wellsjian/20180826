@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+            background:lime;                                设置背景颜色
+            background-color:red;                           設置背景顏色
+            background-image:url("路徑")                    設置背景圖片
+            background-repeat:repeat-y;repeat-x:no-repeat   設置背景圖片的重複方式
+            background-position:x y;                        設置背景圖片的顯示位置
+            background-position:right bottom;               設置背景圖片的顯示位置 右下
+            background-position:100% 100%;                  設置背景圖片的顯示位置 右下
+            background-size:500px 500px;                    設置背景圖片的大小
+            background:color url("") repeat position;       設置圖片簡寫模式
+            box-shadow:offsetX offsetY blur (spread) color; 设置盒阴影 x y 模糊程度 颜色
+            border:width style color;                       边框实现：填写边框的边框宽度,边框样式,边框颜色
+            border-top:8px solid blue;                      设置上边框：边框宽度,实线边框,边框颜色
+            border-right:8px solid rgba(0,0,0,0);           设置右边框：边框宽度,实线边框,边框颜色
+            border-bottom:8px solid green;                  设置下边框：边框宽度,实线边框,边框颜色
+            border-left:8px solid lime;                     设置左边框：边框宽度,实线边框,边框颜色
+            border-radius:像素值/百分比                       设置圆角边框
+            box-sizing:border-box;                          调整盒模型的计算方式，取值border-box时，表示当前元素指定的width/height是包含边框在内区域的尺寸
+            color:rgba(255,0,0,0);                          设置字体颜色
+            font-weight:normal;bold;(400,700)               設置字體粗細程度
+            font-size:8px;                                  设置字体大小
+            font-style:italic;                              設置斜體
+            font-family:"黑體","Microsoft YaHei",Arial;     設置字體名稱
+            font : style weight size family;                設置字體屬性簡寫
+            height:88px                                     设置高度
+            width:88px                                      设置宽度
+            display:inline-block;                           元素类型转换,行内快模式
+            overflow:hidden;                                父元素设置overflow:hidden;解决子元素全部设置浮动,导致父元素高度为0,影响父元素背景色和背景图片展示,影响页面布局
+            overflow:auto;                                  处理内容溢出：内容超出元素的尺寸范围:auto自动在溢出方向添加可用滚动条
+            clear:/left/right/both;                         清除浮动:使文档中正常元素不受前面浮动元素的影响：/左浮影响/右浮动影响/整体浮动影响
+            cursor:default;                                  設置鼠標的顯示形狀 取default箭頭 pointer 手指 text I
+            transition:8s;                                  添加过渡属性：在属性两种元素状态切换时添加平滑过渡效果
+            text-align:center;justify;lef;right;            文本水平居中
+            text-decoration:none;underline overlinline-throughe         取消超链接默认下划线
+            元素:hover;                                     设置元素鼠标悬停时的属性
+            outline:none;                                   取消表单控件在焦点状态下的轮廓线,取none可以取消文本输入框默认轮廓线
+            outline:width style color;                      设置轮廓线：填写边框的边框宽度,边框样式,边框颜色
+            padding:像素;                                    设置内边距:调整元素内容框与边框之间的距离
+            margin：像素;                                    设置外边距：调整元素与元素之间的距离
+
+            line-height:像素;                                文本垂直居中
+            vertical-align:top;                             水平方向上元素之间的垂直对齐方式：top(上)/middle(中)/bottom(下)
+            float:left/right;                               浮动布局:设置元素向左浮动或向右浮动
+            list-style:none;                                去除列表项目符号
+
+            readonly                                        限制用户在输入框中输入内容
+            position:relative/absolute/fixed;               定位布局:可取relative（相对定位）/absolute（绝对定位）/fixed（固定定位）,设置偏移属性
+            z-index:数字随意;                                调整堆叠次序：元素发生堆叠时可以使用 z-index 属性调整已定位元素的显示位置，值越大元素越靠上,只有定位元素才能够使用z-index属性调整次序
+            transparent:透明的 rgba(0,0,0,0)
+    </style>
+<body>
+    <hr>                        水平线标签:在页面中插入一条水平分割线
+    <br>                        格式标签:换行标签
+    <i></i>                     斜体标签
+    <b></b>                     加粗标签
+    <p></p>                     段落标签
+    <a href=""></a>             超鏈接  javascrip:void(0)爲阻止超鏈接的自我鏈接
+    <u></u>                     删除线标签
+    <h1></h1>                   标题标签:自带加粗效果,从h1到h6字体大小逐级递减
+    <div></div>                 容器标签:常用于页面结构划分，结合CSS实现网页布局
+    <span></span>               行分区标签:用于对特殊文本特殊处理
+    <strong></strong>           强调标签:效果同b标签
+    <img src="" alt="">         图片标签:用于在网页中插入一张图片
+    <label for=""></label>      普通文本标签：常与表单控件结合实现文本与控件的绑定
+    <textarea name="" id="" cols="30" rows="10"></textarea>   多行文本
+</body>
+</html>知识点.html
+塊元素:   独占一行,不与元素共行;可以手动设置宽高,默认宽度与与父元素保持一致 例 : body div h1~h6 p ul ol li form,
+table(默认尺寸由内容决定)
+2. 行内元素   可以与其他元素共行显示;不能手动设置宽高,尺寸由内容决定 例 : span label b strong i s u sub sup a
+3. 行内块元素      可以与其他元素共行显示,又能手动调整宽高 例 : img input button (表单控件)

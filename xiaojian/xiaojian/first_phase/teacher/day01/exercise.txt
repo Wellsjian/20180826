@@ -1,0 +1,15 @@
+day01 作业
+1. 排除下列代码错误
+name = input("请输入姓名:)
+age=input("请输入年龄:"
+print(姓名是:+name)
+print(年龄是age)
+
+2. 在控制台中录入你的姓名,然后程序显示:  您好:xxx
+
+不要拘泥于课本,不局限于课堂.
+3. 看教程:www.runoob.com
+4. 看文档:docs.python.org/zh-cn/3/
+5. 逛社区:www.pythontab.com
+
+6. 百度搜索,pycharm快捷键.

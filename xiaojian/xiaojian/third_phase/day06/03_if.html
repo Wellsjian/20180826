@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //.1  if 語句
+        var a = 10;
+        if (a < 5){
+            console.log('ok')
+            }
+        if ( a > 5 ) console.log('ok');
+        console.log('error')
+        //.2 if-else 語句
+        if( a == 0 ){
+
+        }else{
+
+        }
+        //3.if-else if 語句
+        bmi = 20.5;
+        if(bmi > 23.5){
+        console.log('1')
+        }else if(bmi > 18.5){
+        console.log('2')
+        }else if(bmi > 16){
+        console.log('3')
+        }else{
+        console.log('4')
+        }
+        /*
+        接收用戶輸入的年月日
+        計算當日是該年的第幾天
+        */
+        var year = prompt("請輸入年份:");
+        var month = prompt("請輸入月份:");
+        var day = prompt("請輸入日子:");
+        var res = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+        var res1 = month > 2
+    </script>
+</head>
+<body>
+
+</body>
+</html>

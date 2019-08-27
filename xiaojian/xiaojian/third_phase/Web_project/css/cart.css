@@ -1,0 +1,233 @@
+/*导航栏部分*/
+#nav{
+    margin-top:50px;
+    }
+
+/*1.1三列布局*/
+.nav_top{
+    overflow:hidden;
+    margin-bottom:20px;
+    }
+/*最左侧的logo*/
+.nav_top>img{
+    float:left;
+    width:168px;
+    border-radius:10px;
+    }
+
+/*搜索栏*/
+
+.search{
+    float:left;
+    margin-left:113px;
+    position:relative;
+    }
+
+.search input{
+    width:380px;
+    height:36px;
+    border:1px solid #999;
+    border-radius:18px;
+    padding:0;
+    padding-left:10px;
+    padding-right:40px;
+    }
+
+.search img{
+    width:36px;
+    height:36px;
+    position:absolute;
+    right:0;
+    top:1px;
+    }
+
+.nav_top>ul{
+    float:right;
+    margin-top:9px;
+    }
+
+.nav_top>ul>li{
+    float:left;
+    }
+
+.nav_top>ul>li b{
+    margin:0 10px;
+    }
+.nav_top>ul>li img{
+    vertical-align:top;
+    }
+
+/*1.2文字导航*/
+
+.nav_bottom a{
+    font-size:16px;
+    margin-right:50px;
+    }
+
+/*2主体*/
+#main{
+    margin-top:50px;
+    position:relative;
+    padding-bottom:30px;
+    }
+
+/*2.1标题栏*/
+#main>h2{
+    color:#222;
+    }
+
+#main>h2>p{
+    float:right;
+    font-size:12px;
+    color:#9a9a9a;
+    font-weight:400;
+    }
+
+#main>h2>p span{
+    margin-left:30px;
+    }
+
+#.tatal_price .tatal_count{
+    margin:0 3px;
+    color:#997679
+    font-size:14px;
+    }
+
+/*2.2工具栏*/
+#main .toolbar{
+    height:35px;
+    line-height:35px;
+    background:#e6e6e5;
+    border-top:1px solid gray;
+    text-align:center;
+    box-shadow:0 2px 3px gray;
+    margin-top:5px;
+    margin-bottom:15px;
+    color:#808080;
+    }
+.toolbar div{
+    float:left;
+    }
+/*设置每一栏的宽度 */
+.check{
+    width:62px;
+
+    }
+.info{
+    width:380px;
+    }
+.price{
+    width:152px;
+    }
+.count{
+    width:150px;
+    }
+.sum{
+    width:130px;
+    }
+.action{
+    width:126px;
+    cursor:default;
+    }
+/*2.3商品记录展示*/
+.content{
+    /*设置最小高度*/
+    min-height:300px;
+    background:
+    }
+.item{
+    /*overflow:hidden;*/
+    height:115px;
+    text-align:center;
+    background:#fff;
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    margin-bottom:10px;
+
+    }
+.item div{
+    float:left;
+    box-sizing:border-box;
+    text-align:center;
+    height:115px;
+    border-right:2px solid #efe8e8;
+    /*box-shadow:0 2px 3px gray;*/
+    }
+/*商品栏*/
+.item .check {
+    line-height:115px;
+    }
+.item .info img{
+    float:left;
+    margin-right:20px;
+    margin-top:15px;
+    }
+.item .info p{
+    text-align:left;
+    }
+
+.item .info p:nth-child(2){/*找到第二个元素*/
+    margin:15px 0;
+    }
+.item .price h3{
+    color:#997679;
+    margin-top:40px;
+    }
+.item .count a{
+    float:left;
+    width:26px;
+    height:26px;
+    text-align:center;
+    line-height:26px;
+    border:1px solid gray;
+    background:#e8e8e8;
+    color:#333;
+    margin-top:41px;
+    }
+.item .count input{
+    float:left;
+    width:26px;
+    height:26px;
+    text-align:center;
+    border:1px solid gray;
+    border-left:none;
+    border-right:0;
+    padding:0;
+    margin-top:41px;
+    }
+
+.item .count .minus{
+    margin-left:36px;
+    }
+
+.item .sum,.item .action{
+    line-height:115px;
+    font-weight:700;
+    }
+
+.item .action{
+    border-right:0;
+    }
+
+/*2.4底部工具栏*/
+.bottom_bar{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background:#fff;
+    line-height:30px;
+
+    }
+
+.bottom_bar>div{
+    float:right;
+    }
+.bottom_bar button{
+    weight:1201px;
+    height:30px;
+    border:none;
+    background:#997679;
+    color:#fff;
+    font-size:16px;
+    }

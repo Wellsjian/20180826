@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*console.log(window)
+        window.open("127.0.0.1")
+        //.window对象的方法
+        //1.网页弹框
+        alert("操作无效") //无返回值
+        var r = confirm("确认与否")//有返回值
+        console.log(r)
+        var p = prompt("请输入:",0)//可以接收两个参数 第二个为输入框的而默认值
+
+        //全局变量和全局函数是window的属性和方法
+
+        var a = 100
+        function a1(){
+            console.log("a1被调用")
+            }
+        console.log(a,window.a)
+        a1()
+        window.a1()*/
+
+        //2.窗口的打开和关闭
+        /*给出确认框 确定时打开当前文件  点击取消时关闭窗口*/
+        var r = confirm("是否确认")
+        if(r){
+            window.open("http://www.tmooc.cn");
+            }else{
+            window.close();
+            }
+    </script>
+</head>
+<body>
+    <a href="05_history.html">达内官网</a>
+    <a href="01_code.html">window页面</a>
+    <button onclick="console.log(history.length)">获取length</button>
+    <button onclick="history.back()">返回</button>
+    <button onclick="history.forward()">前进</button>
+</body>
+</html>

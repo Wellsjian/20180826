@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*ul,ol{
+            /*取消默認內邊距*/
+            padding:0;
+            /*取消列表的項目符號*/
+            list-style:none;
+            width:80px;
+            }
+        ul{
+            background:orange;
+            /*設置水平居中*/
+            text-align:center;
+            /*設置鼠標的顯示形狀 取default箭頭 pointer 手指 text I*/
+            cursor:default;
+            }
+        ol{
+            /*默認隱藏*/
+            display:none;
+            }
+        .address:hover>ol{
+            /*設置顯示*/
+            display:block;
+            }
+        ol li{
+            /*設置內層背景*/
+            background:pink;
+            }*/
+
+        #nav{
+            width:200px;
+            height:200px;
+            }
+        .a{
+           /*取消鏈接下劃線*/
+            text-decoration:none;
+            width:20px;
+            height:20px;
+            }
+        ul{
+            padding:0;
+            width:80px;
+            display:none;
+            }
+        .a:hover>ul{
+            display:block;
+            }
+        ul li{
+            background:purple;
+            color:#00ff00;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="#nav">
+        <a href="" class="a">文件<ul>
+                <li>文件1</li>
+                <li>文件2</li>
+                <li>文件3</li>
+            </ul>
+        </a><br>
+        <a href="#">圖片</a><br>
+        <a href="#">視頻</a><br>
+        <a href="#">音頻</a>
+    </div>
+    <ul>
+        <li class="address">
+            北京
+            <ol>
+                <li>北京</li>
+                <li>上海</li>
+                <li>廣州</li>
+                <li>張家口</li>
+
+            </ol>
+        </li>
+        <li>
+            美食
+        </li>
+    </ul>
+
+</body>
+</html>

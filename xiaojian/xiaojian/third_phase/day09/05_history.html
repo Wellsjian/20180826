@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log(history)
+    </script>
+</head>
+<body>
+    <a href="01_code.html">达内官网</a>
+    <a href="02_window_object.html">window页面</a>
+    <button onclick="console.log(history.length)">获取length</button>
+    <button onclick="history.back()">返回</button>
+    <button onclick="history.forward()">前进</button>
+    <button onclick="history.go(1)">go(1)</button>
+    <button onclick="history.go(-1)">go(-1)</button>
+    <button onclick="history.go(2)">go(2)</button>
+    <button onclick="history.go(-2)">go(-2)</button>
+    <!--历史记录的长度变化-->
+    <!--1.通过超链接在当前串口访问URL时.会造成记录增加-->
+    <!--2.前进和后退不会影响记录的变化,只是指针的移动-->
+    <!--3历史记录的进出栈管理;-->
+        <!--A->B->C-->
+        <!--从页面C后退至压面A,在A中通过超链接前进至C-->
+        <!--A->C-->
+</body>
+</html>

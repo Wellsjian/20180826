@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div,h1{
+            margin:200px auto;
+            width:100px;
+            height:100px;
+            background-color:red;
+            background-image:url("happy.gif");
+            background-repeat:no-repeat;
+            /*background-position:-100px -100px;*/
+            /*background-position:right bottom;*/
+            /*background-position:100% 100%;*/
+            }
+        div:hover{
+            background-position:-130px -100px;
+            }
+        h1{
+            width:800px;
+            height:800px;
+            margin:0 auto;
+            /*background-size特殊取值:
+            cover將圖片等比拉至最大,完全覆蓋元素,超出部分不可見
+            contain將圖片拉伸至剛好被元素容納*/
+            background-size:500px 500px;
+            }
+        h2{
+            width:1500px;
+            height:1500px;
+            /*background:color url("") repeat position;*/
+            background:cyan url("wxy.jpeg")  center;
+            /*font : style weight size family;*/
+            font:italic 400 32px "youyuan"
+            }
+
+    </style>
+</head>
+<body>
+    <h2>字體樣式</h2>
+    <h1></h1>
+    <div></div>
+</body>
+</html>

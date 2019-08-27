@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--網頁表單-->
+    <!--<form action="">負責給服務端提交數據,action負責給提交的路徑</form>-->
+    <!--<form method="get">设置数据的提交方式,默认为get方式,可以设置为post</form>-->
+    <!--<form enctype="application/x-www-form-urlencoded">设置数据的编码类型,默認爲轉換字符串-->
+    <!--如果涉及到二進制文件,如圖片,音視頻等必須設置method爲post類型,編碼方式爲-->
+    <!--multipart/form-data-->
+    <!--</form>-->
+    <form action="/login" method="post" enctype="multipart/form-data" style="">
+        <!--1.表單控件-->
+        <p>用戶姓名:<input type="text" name="username" placeholder="用戶名由數字和字母組成"
+                       maxlength="5"></p>
+        <p>用戶密碼:<input type="password" name="passwd" placeholder="密碼由字母,數字和下劃線組成"
+                       maxlength="10" ></p>
+        <p>用戶性別:
+            <!--一組按鈕的控件必須一致 單選框 radio 複選框 checkbox 隱藏 hidden-->
+            <input type="radio" name="gender" value="boy" checked="checked" id="boy">
+            <label for="boy">男</label>
+            <input type="radio" name="gender" value="girl" id="girl">
+            <label for="girl">女</label>
+        </p>
+        <!--2.label for id 實現文本與空控件的綁定
+        將label標籤的屬性for取值爲對應控件的id值
+        1.將文本寫在label標籤中等待綁定
+        2.在需要綁定的輸入中設置地類型
+        3.在label中for屬性綁定id
+        -->
+        <p>
+            興趣愛好:
+            <input type="checkbox" name="hobby" value="smoke" checked id="smoke">
+            <label for="smoke">抽菸</label>
+            <input type="checkbox" name="hobby" value="drink" id="drink">
+            <label for="drink">喝酒</label>
+            <input type="checkbox" name="hobby" value="massage" id="massage">
+            <label for="massage">保健</label>
+        </p>
+
+        <!--3.隱藏域:將一些服務端需要,用戶不需要的瞭解的數據提交上去,對用戶不可見-->
+        <input type="hidden" name="userid" value="001">
+        <!--4.下拉菜單的默認-->
+        <select name="city" id="">
+            <!--默認選中第一個option,可以手動設置selected表示默認選中-->
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="shenzhen">深圳</option>
+            <option value="guangzhou" selected>廣州</option>
+            <option value="suzhou">蘇州</option>
+            <option value="hangzhou">杭州</option>
+        </select>
+        <!--文件選擇框-->
+        <p>用戶頭像:<input type="file" name="userimg"></p>
+        <!--功能按鈕,用來向服務端提交信息-->
+        <!--1.提交按鈕:默認爲提交按鈕,點擊提交數據到後臺,可以設置value屬性,表示按鈕的顯示文本-->
+        <p><input type="submit" value="註冊"></p>
+        <!--2.重置按鈕:點擊時將表單還原至初始狀態-->
+        <p><input type="reset" value="充填"></p>
+        <!--3.普通按鈕:自定義點擊處理-->
+        <p>
+            <input type="button" value="點擊"><br>
+            <!--書寫在form內部的button按鈕,相當於submit提交按鈕-->
+            <!--書寫在form外部button的按鈕,相當於普通按鈕,需要自定義造作-->
+            <button>form內的button按鈕</button>
+        </p>
+    </form>
+    <button>form外的button按鈕</button>
+</body>
+</html>

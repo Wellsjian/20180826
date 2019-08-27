@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*接收用户输入的密码 提取用户名和服务箱*/
+
+        //1.使用获取下标indexOf,截取来分割
+        var str = "zhangsan@163.com"
+        var index = str.indexOf("@")
+        var r0 = str.substring(0,index)
+        var r1 = str.substring(index+1)
+        console.log(r0,r1)
+
+        //2.使用@split()来分割
+        var r2 = str.split("@")
+        console.log(r2[0],r2[1])
+
+        /*从身份证中提取年月日信息*/
+        var str1 = "150489199805291215"
+        var year = str1.substring(6,10)
+        var month = str1.substring(10,12)
+        var day = str1.substring(12,14)
+        console.log(year,month,day)
+        /*商品id为101 数量为5*/
+        var str2 = "101_5&201_7&301_9"
+        var arr = str2.split("&")
+        for(var i in arr){
+            var arr1 = arr[i].split("_")
+            console.log(arr1[0],arr1[1])
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

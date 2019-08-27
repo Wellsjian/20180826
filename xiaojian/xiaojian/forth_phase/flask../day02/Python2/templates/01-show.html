@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/show.css')}}" type="text/css">
+    <style>
+        .c1{
+            background:red;
+        }
+        .c2{
+            background:orange;
+        }
+        .c3{
+            background:cyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>控制语句</h1>
+    {% if params.age < 18 %}
+        <h3>{{params.age}}岁未成年</h3>
+    {% elif params.age < 40 %}
+        <h3>直接步入中年</h3>
+    {% else %}
+        <h3>{{params.age}}岁已是成年人</h3>
+    {% endif %}
+
+    {% for user in params.info %}
+        <h3
+                {% if loop.first %}
+                    class="c1"
+                {% elif loop.last %}
+                    class="c2"
+                {% else %}
+                    class="c3"
+                {% endif %}
+
+        >姓名：{{ user.name }},年龄：{{ user.age }}</h3>
+    {% endfor %}
+
+
+
+
+
+    <hr>
+    <h1>模板变量</h1>
+    <h1>列表，元组和字典都可以使用[key/index]和点语法访问</h1>
+    <h1>name:{{ params['name'] }}</h1>
+    <h1>age:{{ params.age }}</h1>
+    <h1>小泽{{ params.dic.name }}</h1>
+    <h1>爱好:{{　params.list[0]　}}</h1>
+    <h1>爱好:{{　params.list.0　}}</h1>
+    <h1>数据库:{{　params.tup[1]　}}</h1>
+    <h1>数据库:{{　params.tup.1　}}</h1>
+    <h1>宠物名:{{ params.cat.name}}</h1>
+    <h1>{{ params.cat.play()}}</h1>
+    <hr>
+    <h1>过滤器</h1>
+    <h2>upper:{{ params.s1|upper}}</h2>
+    <h2>title:{{ params.s1|title}}</h2>
+    <h2>参考{{ params.s2 }}</h2>
+    <h2>参考{{ params.s2|trim }}</h2>
+    <h2>first:{{ params.list|first }}</h2>
+    <h2>length:{{ params.list|length }}</h2>
+    <p>
+        在模板中使用变量，如果视图函数中未传递相应的值，
+        可以使用default()过滤器设置变量默认值
+    </p>
+    <h2>test:{{ params.test|default("test")}}</h2>
+
+
+
+
+
+
+</body>
+</html>

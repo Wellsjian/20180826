@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        接收用戶的輸入身高按米體重按千克來計算
+        bmi計算體重/身高的平方
+        保留一位小數
+        判斷身體指數
+        小於18.5 太瘦了
+        18.5-23.9 健康
+        24 --   胖胖
+        */
+        var height = prompt('請輸入身高:');
+        var weight = prompt('請輸入體重:');
+        var bmi = (weight / (height/100)**2 ).toFixed(1);
+        var res = bmi < 18.5 ? "太瘦了" : bmi > 18.5 && bmi < 23.9 ? "健康" :"胖胖";
+        console.log(bmi,res)
+
+    </script>
+</head>
+<body>
+    <h1>res</h1>
+</body>
+</html>

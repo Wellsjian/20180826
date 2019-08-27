@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="05_history.html">达内官网</a>
+    <a href="02_window_object.html">window页面</a>
+    <button onclick="console.log(history.length)">获取length</button>
+    <button onclick="history.back()">返回</button>
+    <button onclick="history.forward()">前进</button>
+    <input type="text" id="userinput">
+    <span id="code"></span>
+    <button id="btn">验证</button>
+    <script>
+        //生成验证码
+        function get_code(){
+            var str = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+            var show = ""
+            //向下取整  math.floor  向上取整 Math.ceil() 四舍五入
+            for(var i = 1 ;i < 5; i++){
+                show += str[parseInt(Math.random(str)*str.length)]
+                }
+            return show
+
+            }
+
+        //元素的id 属性值作为变量值直接操作 储存对象本身
+        console.log(code)
+        //操作元素内容 <span></span>
+        code.innerHTML = get_code().toUpperCase()
+        //获取输入框的值
+        //事件处理函数
+        btn.onclick = function fun(){
+            console.log(userinput.value);
+            //验证
+            if(code.innerHTML == userinput.value.toUpperCase()){
+                alert("输入正确")
+                }else{
+                alert("输入有误")
+                }
+            }
+    </script>
+
+</body>
+</html>

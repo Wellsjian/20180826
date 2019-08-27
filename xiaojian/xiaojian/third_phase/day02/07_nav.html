@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #nav{
+            width:500px;
+            height:50px;
+            background:orange;
+            color:#ff00ff;
+            /*處理水平方向上換行帶來的空格*/
+            font-size:0px;
+            }
+        a{
+            /*子元素需要手動設置字體大小*/
+            font-size:24px;
+            color:#fff;
+            /*去掉下劃線*/
+            text-decoration:none;
+            /*轉換元素的類型 display block表示塊元素  inline表示行內元素
+            inline-block表示行內塊元素 none表示沒有元素屬性爲隱藏*/
+            display:inline-block;
+            width:100px;
+            height:50px;
+            /*文本的水平居中方式*/
+            text-align:center;
+            /*文本的垂直居中方式,可以設置行高與元素感度一致*/
+            line-height:50px;
+            }
+        a:hover{
+            background:green;
+            }
+
+    </style>
+</head>
+<body>
+    <!--導航欄,整體尺寸爲500*50,包含五個導航項-->
+    <div id="nav">
+        <!--文本屬性可以繼承,但是超鏈接的文本顏色需要單獨設置,表單控件input文本樣式等需要單獨設置-->
+        <!--代碼這種的換行會被瀏覽器解析成一個空格字符,影響佈局-->
+        <a href="#">天貓</a>
+        <a href="#">唯品會</a>
+        <a href="#">拼多多</a>
+        <a href="#">淘唧唧</a>
+        <a href="#">京東</a>
+
+    </div>
+    <div id="main"></div>
+</body>
+</html>
