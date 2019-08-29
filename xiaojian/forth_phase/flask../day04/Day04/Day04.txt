@@ -1,0 +1,53 @@
+赵旭
+zhaoxu@tedu.cn
+
+WEB全栈式
+
+1.request
+	1.文件上传
+		1.回顾
+			1.前端
+				1.method = post
+				2.enctype = multipart/form-data
+				   
+				<input type="file">
+			2.服务器端
+				1.f = request.files['name']
+				2.f.save(filename)
+2.模型 - Models
+	1.什么是模型
+		模型 - 根据数据库表结构而创建出来的class
+		一张表一个类
+		一个字段就是一个属性
+	2.模型框架 - ORM
+		1.ORM - Object Relational Mapping
+			中文名:对象关系映射
+			简称:ORM,O/RM,O/R Mapping
+		2.ORM的三大特征
+			1.数据表到编程类的映射
+			2.数据类型的映射
+			3.关系映射
+				将数据库中表与表之间的关系 对应到 编程语言中类与类之间的关系
+		3.ORM的优点
+			1.封装操作提升效率
+			2.省略庞大的数据访问层
+
+	3.Flask中的ORM框架
+		1.SQLAlchemy
+			1.安装SQLAlchemy	
+				pip3 install sqlalchemy
+			2.Flask 中需要使用flask-sqlalchemy支持包
+				pip3 install flask-sqlalchemy
+
+			查看已安装的包 pip3 list
+		2.创建数据库
+			创建一个 flaskDB 的数据库
+			create database flaskDB default charset utf8 collate utf8_general_ci;
+
+
+
+
+
+
+
+
